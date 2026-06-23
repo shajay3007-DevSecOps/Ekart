@@ -22,16 +22,12 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <jacoco.version>0.8.6</jacoco.version>
+        <jacoco.version>0.8.12</jacoco.version>
     <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
     <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
     <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
     <sonar.language>java</sonar.language>
     </properties>
-<properties>
-    <java.version>1.8</java.version>
-    <logback.version>1.5.25</logback.version>
-</properties>
 
     <dependencies>
         <!-- Data JPA -->
@@ -47,10 +43,11 @@
         </dependency>
 
         <!--HAL REST Browser -->
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-rest-hal-browser</artifactId>
-        </dependency>
+    <dependency>
+    <groupId>org.springframework.data</groupId>
+    <artifactId>spring-data-rest-hal-browser</artifactId>
+    <version>3.7.18</version>
+</dependency>
 
         <!-- Spring Security -->
         <dependency>
@@ -59,10 +56,10 @@
         </dependency>
 
         <!-- Thymeleaf -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
+<dependency>
+    <groupId>org.thymeleaf.extras</groupId>
+    <artifactId>thymeleaf-extras-springsecurity5</artifactId>
+</dependency>
 
         <dependency>
             <groupId>org.thymeleaf.extras</groupId>
@@ -90,11 +87,11 @@
         </dependency>
 
         <!-- MySQL -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
-        </dependency>
+<dependency>
+    <groupId>com.mysql</groupId>
+    <artifactId>mysql-connector-j</artifactId>
+    <scope>runtime</scope>
+</dependency>
 
         <!-- Tests -->
         <dependency>
@@ -109,11 +106,7 @@
             <artifactId>bootstrap</artifactId>
             <version>3.3.7</version>
         </dependency>
-             <dependency>
-    <groupId>org.jacoco</groupId> 
-    <artifactId>jacoco-maven-plugin</artifactId>
-    <version>0.8.6</version>
-</dependency>
+             
         <!-- Optional, for jQuery -->
         <dependency>
             <groupId>org.webjars</groupId>
