@@ -30,7 +30,7 @@
     </properties>
 <properties>
     <java.version>1.8</java.version>
-    <logback.version>1.5.13</logback.version>
+    <logback.version>1.5.25</logback.version>
 </properties>
 
     <dependencies>
